@@ -10,8 +10,11 @@ Some of the useful child-interfaces of ApplicationContext are ConfigurableApplic
 Some of the useful ApplicationContext implementations that we use are;
 
 AnnotationConfigApplicationContext: If we are using Spring in standalone java applications and using annotations for Configuration, then we can use this to initialize the container and get the bean objects.
+
 ClassPathXmlApplicationContext: If we have spring bean configuration xml file in standalone application, then we can use this class to load the file and get the container object.
+
 FileSystemXmlApplicationContext: This is similar to ClassPathXmlApplicationContext except that the xml configuration file can be loaded from anywhere in the file system.
+
 AnnotationConfigWebApplicationContext and XmlWebApplicationContext for web applications.
 Usually if you are working on Spring MVC application and your application is configured to use Spring Framework, Spring IoC container gets initialized when application starts and when a bean is requested, the dependencies are injected automatically.
 
