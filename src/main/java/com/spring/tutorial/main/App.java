@@ -7,6 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.spring.tutorial.config.AppConfig;
 import com.spring.tutorial.model.EmployeeDTO;
+import com.spring.tutorial.service.AwareService;
 import com.spring.tutorial.service.EmployeeManager;
 
 public class App {
@@ -43,6 +44,12 @@ public class App {
 		manager1.addEmployeeReturnValue();
 		manager1.addEmployeeAround("someone");
 		manager1.simpleEmployeeGetter();
-		manager1.customAnnotationDemoMethod();		
+		manager1.customAnnotationDemoMethod();
+		
+		System.out.println();
+		System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+		AbstractApplicationContext context2 = new AnnotationConfigApplicationContext(AppConfig.class);
+		context2.getBean("awareService", AwareService.class);
+		context2.close();
 	}
 }
