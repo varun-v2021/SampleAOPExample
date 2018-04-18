@@ -23,3 +23,4 @@ However for standalone application, you need to initialize the container somewhe
 
 Reference:
 https://www.journaldev.com/2461/spring-ioc-bean-example-tutorial
+https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial
